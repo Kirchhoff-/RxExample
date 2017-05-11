@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         findViewById(R.id.firstExample).setOnClickListener(this);
+        findViewById(R.id.mapOperator).setOnClickListener(this);
     }
 
     @Override
@@ -22,6 +23,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.firstExample:
                 Intent intent = new Intent(this, FirstActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.mapOperator:
+                Intent mapIntent = new Intent(this, MapOperatorActivity.class);
+                startActivity(mapIntent);
                 break;
         }
     }
