@@ -1,10 +1,12 @@
-package com.example.kirchhoff.rxexample;
+package com.example.kirchhoff.rxexample.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.example.kirchhoff.rxexample.R;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -25,7 +27,7 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_first);
+        setContentView(R.layout.a_base);
 
         textView = (TextView) findViewById(R.id.textView);
 

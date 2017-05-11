@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample;
+package com.example.kirchhoff.rxexample.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,13 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.kirchhoff.rxexample.data.ApiUser;
+import com.example.kirchhoff.rxexample.R;
 import com.example.kirchhoff.rxexample.data.User;
 import com.example.kirchhoff.rxexample.utils.UserUtils;
 
 import java.util.List;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -22,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
  * @author Kirchhoff-
  */
 
-public class MapOperatorActivity extends AppCompatActivity {
+public class ZipOperatorActivity extends AppCompatActivity {
 
     private static final String TAG = FirstActivity.class.getName();
 
@@ -32,62 +34,59 @@ public class MapOperatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_first);
+        setContentView(R.layout.a_base);
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> mapExample());
+        findViewById(R.id.button).setOnClickListener(view -> zipExample());
     }
 
-
     /*
-      * Here we are getting ApiUser Object from api server
-      * then we are converting it into User Object because
-      * may be our database support User Not ApiUser Object
-      * Here we are using Map Operator to do that
-    */
-    private void mapExample() {
-        getObservable()
+      * Here we are getting two user list
+      * One, the list of football player
+      * Another one, the list of basketball player
+      * Then we are finding the list of players who play both
+      */
+    private void zipExample() {
+        Observable.zip(getFootballPlayersObservable(), getBasketballPlayersObservable(),
+                /*
+                    without lambda expression
+                new BiFunction<List<User>, List<User>, List<User>>() {
+                    @Override
+                    public List<User> apply(@NonNull List<User> footballPlayers,
+                                            @NonNull List<User> basketballPlayers) throws Exception {
+                        return UserUtils.filterUserWhoPlayFootballAndBasketball(footballPlayers,
+                                basketballPlayers);
+                    }
+                })*/
+                UserUtils::filterUserWhoPlayFootballAndBasketball)
                 // Run on a background thread
                 .subscribeOn(Schedulers.io())
                 // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
-                /*map function without lambda ->
-                .map(new Function<List<ApiUser>, List<User>>() {
-
-                    @Override
-                    public List<User> apply(List<ApiUser> apiUsers) throws Exception {
-                        return UserUtils.convertApiUserListToUserList(apiUsers);
-                    }
-                }) */
-                .map(UserUtils::convertApiUserListToUserList)
                 .subscribe(getObserver());
-
-
     }
 
-    private Observable<List<ApiUser>> getObservable() {
-        /* Without lambda expression
-
-
-        return Observable.create(new ObservableOnSubscribe<List<ApiUser>>() {
-            @Override
-            public void subscribe(ObservableEmitter<List<ApiUser>> e) throws Exception {
-                if (!e.isDisposed()) {
-                    e.onNext(UserUtils.getApiUserList());
-                    e.onComplete();
-                }
-            }
-        }); */
-
+    private Observable<List<User>> getBasketballPlayersObservable() {
         return Observable.create(e -> {
             if (!e.isDisposed()) {
-                e.onNext(UserUtils.getApiUserList());
+                e.onNext(UserUtils.getBasketballPlayer());
                 e.onComplete();
             }
         });
     }
 
+    private Observable<List<User>> getFootballPlayersObservable() {
+        return Observable.create(new ObservableOnSubscribe<List<User>>() {
+            @Override
+            public void subscribe(ObservableEmitter<List<User>> e) throws Exception {
+                if (!e.isDisposed()) {
+                    e.onNext(UserUtils.getFootballPlayer());
+                    e.onComplete();
+                }
+            }
+        });
+    }
 
     private Observer<List<User>> getObserver() {
         return new Observer<List<User>>() {
