@@ -69,4 +69,57 @@ public class UserUtils {
 
         return userList;
     }
+
+    public static List<User> getBasketballPlayer() {
+
+        List<User> userList = new ArrayList<>();
+
+        User userOne = new User();
+        userOne.id = 1;
+        userOne.firstName = "Steve";
+        userOne.lastName = "Carry";
+        userList.add(userOne);
+
+        User userTwo = new User();
+        userTwo.id = 2;
+        userTwo.firstName = "Mike";
+        userTwo.lastName = "Jordan";
+        userList.add(userTwo);
+
+        return userList;
+    }
+
+
+    public static List<User> getFootballPlayer() {
+
+        List<User> userList = new ArrayList<>();
+
+        User userOne = new User();
+        userOne.id = 1;
+        userOne.firstName = "Steve";
+        userOne.lastName = "Carry";
+        userList.add(userOne);
+
+        User userTwo = new User();
+        userTwo.id = 3;
+        userTwo.firstName = "Kobe";
+        userTwo.lastName = "Bryant";
+        userList.add(userTwo);
+
+        return userList;
+    }
+
+    public static List<User> filterUserWhoPlayFootballAndBasketball(List<User> footballPlayers, List<User> basketballPlayers) {
+        List<User> playerBoth = new ArrayList<User>();
+        for (User footballPlayer : footballPlayers) {
+            for (User basketballPlayer : basketballPlayers) {
+                if (footballPlayer.id == basketballPlayer.id) {
+                    playerBoth.add(footballPlayer);
+                }
+            }
+        }
+        return playerBoth;
+    }
+
+
 }

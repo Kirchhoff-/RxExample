@@ -22,6 +22,8 @@
 
         <activity android:name=".MapOperatorActivity" />
 
+        <activity android:name=".ZipOperatorActivity" />
+
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.firstExample).setOnClickListener(this);
         findViewById(R.id.mapOperator).setOnClickListener(this);
+        findViewById(R.id.zipOperator).setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.mapOperator:
                 Intent mapIntent = new Intent(this, MapOperatorActivity.class);
                 startActivity(mapIntent);
+                break;
+
+            case R.id.zipOperator:
+                Intent zipIntent = new Intent(this, ZipOperatorActivity.class);
+                startActivity(zipIntent);
                 break;
         }
     }
