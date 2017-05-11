@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
 import io.reactivex.Observable;
@@ -30,12 +29,7 @@ public class FirstActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                emitValues();
-            }
-        });
+        findViewById(R.id.button).setOnClickListener(view -> emitValues());
     }
 
 
