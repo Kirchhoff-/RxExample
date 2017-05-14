@@ -9,6 +9,7 @@ import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.TimerActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.zipOperator).setOnClickListener(this);
         findViewById(R.id.takeOperator).setOnClickListener(this);
         findViewById(R.id.disposable).setOnClickListener(this);
+        findViewById(R.id.timer).setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.takeOperator:
                 Intent takeIntent = new Intent(this, TakeOperatorActivity.class);
                 startActivity(takeIntent);
+                break;
+
+            case R.id.timer:
+                Intent timer = new Intent(this, TimerActivity.class);
+                startActivity(timer);
                 break;
         }
     }

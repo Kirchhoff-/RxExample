@@ -28,6 +28,8 @@
 
         <activity android:name=".ui.TakeOperatorActivity" />
 
+        <activity android:name=".ui.TimerActivity" />
+
     </application>
 
 </manifest>
