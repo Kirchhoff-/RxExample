@@ -27,9 +27,15 @@
         android:text="Zip operator" />
 
     <Button
-        android:id="@+id/disposableOperator"
+        android:id="@+id/disposable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Disposable operator" />
+        android:text="Disposable" />
+
+    <Button
+        android:id="@+id/takeOperator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take operator" />
 
 </LinearLayout>

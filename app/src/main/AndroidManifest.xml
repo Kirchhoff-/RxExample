@@ -26,6 +26,8 @@
 
         <activity android:name=".ui.DisposableActivity" />
 
+        <activity android:name=".ui.TakeOperatorActivity" />
+
     </application>
 
 </manifest>
