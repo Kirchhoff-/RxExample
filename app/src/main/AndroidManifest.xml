@@ -24,6 +24,8 @@
 
         <activity android:name=".ui.ZipOperatorActivity" />
 
+        <activity android:name=".ui.DisposableActivity" />
+
     </application>
 
 </manifest>

@@ -26,4 +26,10 @@
         android:layout_height="wrap_content"
         android:text="Zip operator" />
 
+    <Button
+        android:id="@+id/disposableOperator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disposable operator" />
+
 </LinearLayout>

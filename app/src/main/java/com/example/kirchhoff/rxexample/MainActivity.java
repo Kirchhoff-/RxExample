@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.firstExample).setOnClickListener(this);
         findViewById(R.id.mapOperator).setOnClickListener(this);
         findViewById(R.id.zipOperator).setOnClickListener(this);
+        findViewById(R.id.disposableOperator).setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.zipOperator:
                 Intent zipIntent = new Intent(this, ZipOperatorActivity.class);
                 startActivity(zipIntent);
+                break;
+
+            case R.id.disposableOperator:
+                Intent disposableIntent = new Intent(this, DisposableActivity.class);
+                startActivity(disposableIntent);
                 break;
         }
     }
