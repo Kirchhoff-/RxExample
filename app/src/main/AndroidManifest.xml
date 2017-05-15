@@ -32,6 +32,8 @@
 
         <activity android:name=".ui.IntervalActivity" />
 
+        <activity android:name=".ui.SingleObserverActivity" />
+
     </application>
 
 </manifest>
