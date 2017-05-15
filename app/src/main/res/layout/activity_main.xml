@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,73 +7,80 @@
     tools:context="com.example.kirchhoff.rxexample.MainActivity">
 
 
-    <Button
-        android:id="@+id/firstExample"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="First Example" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/firstExample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Example" />
 
 
-    <Button
-        android:id="@+id/mapOperator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Map operator" />
+        <Button
+            android:id="@+id/mapOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Map operator" />
 
-    <Button
-        android:id="@+id/zipOperator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Zip operator" />
+        <Button
+            android:id="@+id/zipOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zip operator" />
 
-    <Button
-        android:id="@+id/disposable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Disposable" />
+        <Button
+            android:id="@+id/disposable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disposable" />
 
-    <Button
-        android:id="@+id/takeOperator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Take operator" />
-
-
-    <Button
-        android:id="@+id/timer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Timer" />
-
-    <Button
-        android:id="@+id/interval"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Interval" />
-
-    <Button
-        android:id="@+id/singleObserver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Single Observer" />
+        <Button
+            android:id="@+id/takeOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take operator" />
 
 
-    <Button
-        android:id="@+id/completableObserver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Completable Observer" />
+        <Button
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Timer" />
 
-    <Button
-        android:id="@+id/flowable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Flowable" />
+        <Button
+            android:id="@+id/interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interval" />
 
-    <Button
-        android:id="@+id/reduceOperator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Reduce Operator" />
+        <Button
+            android:id="@+id/singleObserver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Single Observer" />
 
-</LinearLayout>
+
+        <Button
+            android:id="@+id/completableObserver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completable Observer" />
+
+        <Button
+            android:id="@+id/flowable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flowable" />
+
+        <Button
+            android:id="@+id/reduceOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reduce Operator" />
+
+    </LinearLayout>
+
+</ScrollView>

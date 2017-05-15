@@ -36,7 +36,7 @@
 
         <activity android:name=".ui.CompletableObserverActivity" />
 
-        <activity android:name=".ui.FlowableExampleActivity" />
+        <activity android:name=".ui.FlowableActivity" />
 
         <activity android:name=".ui.ReduceOperatorActivity" />
 

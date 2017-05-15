@@ -1,5 +1,7 @@
 package com.example.kirchhoff.rxexample.ui;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
@@ -24,6 +26,11 @@ public class DisposableActivity extends AppCompatActivity {
     private static final String TAG = FirstActivity.class.getName();
     private final CompositeDisposable disposables = new CompositeDisposable();
     private TextView textView;
+
+    public static void startMe(Activity activity) {
+        Intent intent = new Intent(activity, DisposableActivity.class);
+        activity.startActivity(intent);
+    }
 
     static Observable<String> sampleObservable() {
       /*  return Observable.defer(new Callable<ObservableSource<? extends String>>() {

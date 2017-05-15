@@ -1,5 +1,7 @@
 package com.example.kirchhoff.rxexample.ui;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,12 +18,16 @@ import io.reactivex.disposables.Disposable;
  * @author Kirchhoff-
  */
 
-public class FlowableExampleActivity extends AppCompatActivity {
+public class FlowableActivity extends AppCompatActivity {
 
     private static final String TAG = FirstActivity.class.getName();
 
     private TextView textView;
 
+    public static void startMe(Activity activity) {
+        Intent intent = new Intent(activity, FlowableActivity.class);
+        activity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
