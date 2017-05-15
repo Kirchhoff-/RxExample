@@ -99,6 +99,13 @@
             android:layout_height="wrap_content"
             android:text="Skip Operator" />
 
+        <Button
+            android:id="@+id/replayOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Replay Operator" />
+
+
     </LinearLayout>
 
 </ScrollView>
