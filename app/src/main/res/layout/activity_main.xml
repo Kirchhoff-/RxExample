@@ -81,6 +81,12 @@
             android:layout_height="wrap_content"
             android:text="Reduce Operator" />
 
+        <Button
+            android:id="@+id/bufferOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buffer operator" />
+
     </LinearLayout>
 
 </ScrollView>

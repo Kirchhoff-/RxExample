@@ -40,6 +40,8 @@
 
         <activity android:name=".ui.ReduceOperatorActivity" />
 
+        <activity android:name=".ui.BufferOperatorActivity" />
+
     </application>
 
 </manifest>

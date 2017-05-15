@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.kirchhoff.rxexample.ui.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.completableObserver).setOnClickListener(this);
         findViewById(R.id.flowable).setOnClickListener(this);
         findViewById(R.id.reduceOperator).setOnClickListener(this);
+        findViewById(R.id.bufferOperator).setOnClickListener(this);
     }
 
     @Override
@@ -82,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.reduceOperator:
                 ReduceOperatorActivity.startMe(this);
+                break;
+
+            case R.id.bufferOperator:
+                BufferOperatorActivity.startMe(this);
                 break;
         }
     }
