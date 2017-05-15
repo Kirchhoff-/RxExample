@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.timer).setOnClickListener(this);
         findViewById(R.id.interval).setOnClickListener(this);
         findViewById(R.id.singleObserver).setOnClickListener(this);
+        findViewById(R.id.completableObserver).setOnClickListener(this);
     }
 
     @Override
@@ -73,6 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.singleObserver:
                 Intent singleObserver = new Intent(this, SingleObserverActivity.class);
                 startActivity(singleObserver);
+                break;
+
+            case R.id.completableObserver:
+                Intent completableIntent = new Intent(this, CompletableObserverActivity.class);
+                startActivity(completableIntent);
                 break;
         }
     }
