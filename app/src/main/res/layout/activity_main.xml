@@ -70,4 +70,10 @@
         android:layout_height="wrap_content"
         android:text="Flowable" />
 
+    <Button
+        android:id="@+id/reduceOperator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reduce Operator" />
+
 </LinearLayout>

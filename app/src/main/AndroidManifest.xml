@@ -38,6 +38,8 @@
 
         <activity android:name=".ui.FlowableExampleActivity" />
 
+        <activity android:name=".ui.ReduceOperatorActivity" />
+
     </application>
 
 </manifest>

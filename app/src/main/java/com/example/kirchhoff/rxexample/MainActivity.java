@@ -11,6 +11,7 @@ import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.FlowableExampleActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.SingleObserverActivity;
 import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TimerActivity;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.singleObserver).setOnClickListener(this);
         findViewById(R.id.completableObserver).setOnClickListener(this);
         findViewById(R.id.flowable).setOnClickListener(this);
+        findViewById(R.id.reduceOperator).setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +89,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.flowable:
                 Intent flowableIntent = new Intent(this, FlowableExampleActivity.class);
                 startActivity(flowableIntent);
+                break;
+
+            case R.id.reduceOperator:
+                Intent reduceIntent = new Intent(this, ReduceOperatorActivity.class);
+                startActivity(reduceIntent);
                 break;
         }
     }
