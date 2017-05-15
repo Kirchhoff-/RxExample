@@ -36,6 +36,8 @@
 
         <activity android:name=".ui.CompletableObserverActivity" />
 
+        <activity android:name=".ui.FlowableExampleActivity" />
+
     </application>
 
 </manifest>

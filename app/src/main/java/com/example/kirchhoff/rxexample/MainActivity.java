@@ -8,6 +8,7 @@ import android.view.View;
 import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
+import com.example.kirchhoff.rxexample.ui.FlowableExampleActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.SingleObserverActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.interval).setOnClickListener(this);
         findViewById(R.id.singleObserver).setOnClickListener(this);
         findViewById(R.id.completableObserver).setOnClickListener(this);
+        findViewById(R.id.flowable).setOnClickListener(this);
     }
 
     @Override
@@ -80,6 +82,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.completableObserver:
                 Intent completableIntent = new Intent(this, CompletableObserverActivity.class);
                 startActivity(completableIntent);
+                break;
+
+            case R.id.flowable:
+                Intent flowableIntent = new Intent(this, FlowableExampleActivity.class);
+                startActivity(flowableIntent);
                 break;
         }
     }
