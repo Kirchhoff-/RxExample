@@ -42,6 +42,8 @@
 
         <activity android:name=".ui.BufferOperatorActivity" />
 
+        <activity android:name=".ui.FilterOperatorActivity" />
+
     </application>
 
 </manifest>

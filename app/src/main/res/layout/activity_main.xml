@@ -87,6 +87,12 @@
             android:layout_height="wrap_content"
             android:text="Buffer operator" />
 
+        <Button
+            android:id="@+id/filterOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter Operator" />
+
     </LinearLayout>
 
 </ScrollView>

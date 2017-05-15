@@ -7,6 +7,7 @@ import android.view.View;
 import com.example.kirchhoff.rxexample.ui.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
+import com.example.kirchhoff.rxexample.ui.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.FlowableActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.flowable).setOnClickListener(this);
         findViewById(R.id.reduceOperator).setOnClickListener(this);
         findViewById(R.id.bufferOperator).setOnClickListener(this);
+        findViewById(R.id.filterOperator).setOnClickListener(this);
     }
 
     @Override
@@ -88,6 +90,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bufferOperator:
                 BufferOperatorActivity.startMe(this);
+                break;
+
+            case R.id.filterOperator:
+                FilterOperatorActivity.startMe(this);
                 break;
         }
     }
