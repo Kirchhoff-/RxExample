@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
+import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TimerActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.takeOperator).setOnClickListener(this);
         findViewById(R.id.disposable).setOnClickListener(this);
         findViewById(R.id.timer).setOnClickListener(this);
+        findViewById(R.id.interval).setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.timer:
                 Intent timer = new Intent(this, TimerActivity.class);
                 startActivity(timer);
+                break;
+
+            case R.id.interval:
+                Intent interval = new Intent(this, IntervalActivity.class);
+                startActivity(interval);
                 break;
         }
     }
