@@ -66,6 +66,8 @@
 
         <activity android:name=".ui.BehaviorSubjectActivity" />
 
+        <activity android:name=".ui.AsyncSubjectActivity" />
+
     </application>
 
 </manifest>

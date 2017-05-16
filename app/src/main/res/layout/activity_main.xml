@@ -160,6 +160,12 @@
             android:layout_height="wrap_content"
             android:text="Behavior Subject" />
 
+        <Button
+            android:id="@+id/asyncSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Async Subject" />
+
     </LinearLayout>
 
 </ScrollView>

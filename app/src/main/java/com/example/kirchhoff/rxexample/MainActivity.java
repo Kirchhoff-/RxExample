@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.kirchhoff.rxexample.ui.AsyncSubjectActivity;
 import com.example.kirchhoff.rxexample.ui.BehaviorSubjectActivity;
 import com.example.kirchhoff.rxexample.ui.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.replaySubject).setOnClickListener(this);
         findViewById(R.id.publishSubject).setOnClickListener(this);
         findViewById(R.id.behaviorSubject).setOnClickListener(this);
+        findViewById(R.id.asyncSubject).setOnClickListener(this);
     }
 
     @Override
@@ -160,6 +162,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.behaviorSubject:
                 BehaviorSubjectActivity.startMe(this);
+                break;
+
+            case R.id.asyncSubject:
+                AsyncSubjectActivity.startMe(this);
                 break;
         }
     }
