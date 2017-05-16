@@ -154,6 +154,12 @@
             android:layout_height="wrap_content"
             android:text="Publish Subject" />
 
+        <Button
+            android:id="@+id/behaviorSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Behavior Subject" />
+
     </LinearLayout>
 
 </ScrollView>
