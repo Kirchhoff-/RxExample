@@ -14,6 +14,7 @@ import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplayOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.ScanOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.SingleObserverActivity;
 import com.example.kirchhoff.rxexample.ui.SkipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.filterOperator).setOnClickListener(this);
         findViewById(R.id.skipOperator).setOnClickListener(this);
         findViewById(R.id.replayOperator).setOnClickListener(this);
+        findViewById(R.id.scanOperator).setOnClickListener(this);
     }
 
     @Override
@@ -104,9 +106,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SkipOperatorActivity.startMe(this);
                 break;
 
+            case R.id.scanOperator:
+                ScanOperatorActivity.startMe(this);
+                break;
+
             case R.id.replayOperator:
                 ReplayOperatorActivity.startMe(this);
                 break;
+
         }
     }
 }

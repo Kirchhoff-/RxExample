@@ -48,6 +48,8 @@
 
         <activity android:name=".ui.ReplayOperatorActivity" />
 
+        <activity android:name=".ui.ScanOperatorActivity" />
+
     </application>
 
 </manifest>
