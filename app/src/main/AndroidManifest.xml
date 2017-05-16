@@ -58,6 +58,8 @@
 
         <activity android:name=".ui.DistinctOperatorActivity" />
 
+        <activity android:name=".ui.LastOperatorActivity" />
+
     </application>
 
 </manifest>

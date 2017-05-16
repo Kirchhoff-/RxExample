@@ -14,6 +14,7 @@ import com.example.kirchhoff.rxexample.ui.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.FlowableActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
+import com.example.kirchhoff.rxexample.ui.LastOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MergeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.mergeOperator).setOnClickListener(this);
         findViewById(R.id.deferObservable).setOnClickListener(this);
         findViewById(R.id.distinctOperator).setOnClickListener(this);
+        findViewById(R.id.lastOperator).setOnClickListener(this);
     }
 
     @Override
@@ -136,6 +138,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.distinctOperator:
                 DistinctOperatorActivity.startMe(this);
+                break;
+
+
+            case R.id.lastOperator:
+                LastOperatorActivity.startMe(this);
                 break;
         }
     }
