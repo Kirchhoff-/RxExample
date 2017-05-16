@@ -129,6 +129,12 @@
             android:layout_height="wrap_content"
             android:text="Defer Observable" />
 
+        <Button
+            android:id="@+id/distinctOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distinct Operator" />
+
     </LinearLayout>
 
 </ScrollView>
