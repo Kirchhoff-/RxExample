@@ -117,6 +117,12 @@
             android:layout_height="wrap_content"
             android:text="Concat Operator" />
 
+        <Button
+            android:id="@+id/mergeOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Merge Operator" />
+
     </LinearLayout>
 
 </ScrollView>

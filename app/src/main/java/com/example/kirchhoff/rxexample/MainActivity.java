@@ -13,6 +13,7 @@ import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.FlowableActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.MergeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplayOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ScanOperatorActivity;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.replayOperator).setOnClickListener(this);
         findViewById(R.id.scanOperator).setOnClickListener(this);
         findViewById(R.id.concatOperator).setOnClickListener(this);
+        findViewById(R.id.mergeOperator).setOnClickListener(this);
     }
 
     @Override
@@ -118,6 +120,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.concatOperator:
                 ConcatOperatorActivity.startMe(this);
+                break;
+
+            case R.id.mergeOperator:
+                MergeOperatorActivity.startMe(this);
                 break;
 
         }
