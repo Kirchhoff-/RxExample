@@ -54,6 +54,8 @@
 
         <activity android:name=".ui.MergeOperatorActivity" />
 
+        <activity android:name=".ui.DeferObservableActivity" />
+
     </application>
 
 </manifest>
