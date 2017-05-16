@@ -62,6 +62,8 @@
 
         <activity android:name=".ui.ReplaySubjectActivity" />
 
+        <activity android:name=".ui.PublishSubjectActivity" />
+
     </application>
 
 </manifest>

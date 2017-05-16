@@ -17,6 +17,7 @@ import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.LastOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MergeOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.PublishSubjectActivity;
 import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplayOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplaySubjectActivity;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.distinctOperator).setOnClickListener(this);
         findViewById(R.id.lastOperator).setOnClickListener(this);
         findViewById(R.id.replaySubject).setOnClickListener(this);
+        findViewById(R.id.publishSubject).setOnClickListener(this);
     }
 
     @Override
@@ -148,6 +150,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.replaySubject:
                 ReplaySubjectActivity.startMe(this);
+                break;
+
+            case R.id.publishSubject:
+                PublishSubjectActivity.startMe(this);
                 break;
         }
     }
