@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.example.kirchhoff.rxexample.ui.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
+import com.example.kirchhoff.rxexample.ui.ConcatOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.skipOperator).setOnClickListener(this);
         findViewById(R.id.replayOperator).setOnClickListener(this);
         findViewById(R.id.scanOperator).setOnClickListener(this);
+        findViewById(R.id.concatOperator).setOnClickListener(this);
     }
 
     @Override
@@ -112,6 +114,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.replayOperator:
                 ReplayOperatorActivity.startMe(this);
+                break;
+
+            case R.id.concatOperator:
+                ConcatOperatorActivity.startMe(this);
                 break;
 
         }

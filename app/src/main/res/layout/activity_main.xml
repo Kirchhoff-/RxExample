@@ -111,6 +111,12 @@
             android:layout_height="wrap_content"
             android:text="Replay Operator" />
 
+        <Button
+            android:id="@+id/concatOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Concat Operator" />
+
     </LinearLayout>
 
 </ScrollView>
