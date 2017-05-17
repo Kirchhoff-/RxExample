@@ -22,6 +22,7 @@ import com.example.kirchhoff.rxexample.ui.LastOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MergeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.PublishSubjectActivity;
+import com.example.kirchhoff.rxexample.ui.RangeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplayOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplaySubjectActivity;
@@ -161,5 +162,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void delayOperatorExample(View view) {
         DelayOperatorActivity.startMe(this);
+    }
+
+    public void rangeOperatorExample(View view) {
+        RangeOperatorActivity.startMe(this);
     }
 }

@@ -138,6 +138,10 @@
             android:name=".ui.DelayOperatorActivity"
             android:label="@string/delay.operator" />
 
+        <activity
+            android:name=".ui.RangeOperatorActivity"
+            android:label="@string/range.operator" />
+
     </application>
 
 </manifest>

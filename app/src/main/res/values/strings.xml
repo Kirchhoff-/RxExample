@@ -30,4 +30,5 @@
     <string name="debounce.operator">Debounce operator</string>
     <string name="window.operator">Window operator</string>
     <string name="delay.operator">Delay operator</string>
+    <string name="range.operator">Range operator</string>
 </resources>
