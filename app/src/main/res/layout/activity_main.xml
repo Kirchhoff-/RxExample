@@ -178,6 +178,12 @@
             android:layout_height="wrap_content"
             android:text="Throttle Last" />
 
+        <Button
+            android:id="@+id/debounceOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Debounce operator" />
+
     </LinearLayout>
 
 </ScrollView>

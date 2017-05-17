@@ -72,6 +72,8 @@
 
         <activity android:name=".ui.ThrottleLastActivity" />
 
+        <activity android:name=".ui.DebounceOperatorActivity" />
+
     </application>
 
 </manifest>
