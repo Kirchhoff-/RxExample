@@ -16,184 +16,182 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="firstExample"
-            android:text="First Example" />
+            android:text="@string/first" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="mapOperatorExample"
-            android:text="Map operator" />
+            android:text="@string/map.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="zipOperatorExample"
-            android:text="Zip operator" />
+            android:text="@string/zip.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="disposableOperatorExample"
-            android:text="Disposable" />
+            android:text="@string/disposable.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="takeOperatorExample"
-            android:text="Take operator" />
-
+            android:text="@string/take.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="timerExample"
-            android:text="Timer" />
+            android:text="@string/timer" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="intervalExample"
-            android:text="Interval" />
+            android:text="@string/interval" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="singleObserverExample"
-            android:text="Single Observer" />
-
+            android:text="@string/single.observer" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="completableObserverExample"
-            android:text="Completable Observer" />
+            android:text="@string/completable.observer" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="flowableExample"
-            android:text="Flowable" />
+            android:text="@string/flowable" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="reduceOperatorExample"
-            android:text="Reduce Operator" />
+            android:text="@string/reduce.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="bufferOperatorExample"
-            android:text="Buffer operator" />
+            android:text="@string/buffer.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="filterOperatorExample"
-            android:text="Filter Operator" />
+            android:text="@string/filter.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="skipOperatorExample"
-            android:text="Skip Operator" />
+            android:text="@string/skip.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="scanOperatorExample"
-            android:text="Scan operator" />
+            android:text="@string/scan.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="replayOperatorExample"
-            android:text="Replay Operator" />
+            android:text="@string/replay.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="concatOperatorExample"
-            android:text="Concat Operator" />
+            android:text="@string/concat.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="mergeOperatorExample"
-            android:text="Merge Operator" />
+            android:text="@string/merge.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="deferOperatorExample"
-            android:text="Defer Observable" />
+            android:text="@string/defer.observable" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="distinctOperatorExample"
-            android:text="Distinct Operator" />
+            android:text="@string/distinct.operator" />
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="lastOperatorExample"
-            android:text="Last Operator" />
+            android:text="@string/last.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="replaySubjectExample"
-            android:text="Replay Subject" />
+            android:text="@string/replay.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="publishSubjectExample"
-            android:text="Publish Subject" />
+            android:text="@string/publish.subject" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="behaviorSubjectExample"
-            android:text="Behavior Subject" />
+            android:text="@string/behavior.subject" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="asyncSubjectExample"
-            android:text="Async Subject" />
+            android:text="@string/async.subject" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="throttleFirstExample"
-            android:text="Throttle First" />
+            android:text="@string/throttle.first" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="throttleLastExample"
-            android:text="Throttle Last" />
+            android:text="@string/throttle.last" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="debounceOperatorExample"
-            android:text="Debounce operator" />
+            android:text="@string/debounce.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="windowOperatorExample"
-            android:text="Window operator" />
+            android:text="@string/window.operator" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="delayOperatorExample"
-            android:text="Delay operator" />
+            android:text="@string/delay.operator" />
 
     </LinearLayout>
 

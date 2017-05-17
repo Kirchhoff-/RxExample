@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">RxExample</string>
+    <string name="first">First Activity</string>
+    <string name="map.operator">Map operator</string>
+    <string name="zip.operator">Zip operator</string>
+    <string name="disposable.operator">Disposable operator</string>
+    <string name="take.operator">Take operator</string>
+    <string name="timer">Timer</string>
+    <string name="interval">Interval</string>
+    <string name="single.observer">Single observer</string>
+    <string name="completable.observer">Completable Observer</string>
+    <string name="flowable">Flowable</string>
+    <string name="reduce.operator">Reduce operator</string>
+    <string name="buffer.operator">Buffer operator</string>
+    <string name="filter.operator">Filter operator</string>
+    <string name="skip.operator">Skip operator</string>
+    <string name="replay.operator">Replay operator</string>
+    <string name="scan.operator">Scan operator</string>
+    <string name="concat.operator">Concat operator</string>
+    <string name="merge.operator">Merge operator</string>
+    <string name="defer.observable">Defer observable</string>
+    <string name="distinct.operator">Distinct operator</string>
+    <string name="last.operator">Last operator</string>
+    <string name="replay.subject">Replay subject</string>
+    <string name="publish.subject">Publish subject</string>
+    <string name="behavior.subject">Behavior subject</string>
+    <string name="async.subject">Async subject</string>
+    <string name="throttle.first">Throttle first</string>
+    <string name="throttle.last">Throttle last</string>
+    <string name="debounce.operator">Debounce operator</string>
+    <string name="window.operator">Window operator</string>
+    <string name="delay.operator">Delay operator</string>
 </resources>
