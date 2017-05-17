@@ -28,6 +28,7 @@ import com.example.kirchhoff.rxexample.ui.SingleObserverActivity;
 import com.example.kirchhoff.rxexample.ui.SkipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleFirstActivity;
+import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
 import com.example.kirchhoff.rxexample.ui.TimerActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.behaviorSubject).setOnClickListener(this);
         findViewById(R.id.asyncSubject).setOnClickListener(this);
         findViewById(R.id.throttleFirst).setOnClickListener(this);
+        findViewById(R.id.throttleLast).setOnClickListener(this);
     }
 
     @Override
@@ -172,6 +174,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.throttleFirst:
                 ThrottleFirstActivity.startMe(this);
+                break;
+
+            case R.id.throttleLast:
+                ThrottleLastActivity.startMe(this);
                 break;
         }
     }

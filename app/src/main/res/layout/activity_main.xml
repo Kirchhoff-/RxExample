@@ -172,6 +172,12 @@
             android:layout_height="wrap_content"
             android:text="Throttle First" />
 
+        <Button
+            android:id="@+id/throttleLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Throttle Last" />
+
     </LinearLayout>
 
 </ScrollView>
