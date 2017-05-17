@@ -190,6 +190,12 @@
             android:layout_height="wrap_content"
             android:text="Window operator" />
 
+        <Button
+            android:id="@+id/delayOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delay operator" />
+
     </LinearLayout>
 
 </ScrollView>

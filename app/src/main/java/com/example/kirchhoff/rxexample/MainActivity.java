@@ -11,6 +11,7 @@ import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
 import com.example.kirchhoff.rxexample.ui.ConcatOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.DebounceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.DeferObservableActivity;
+import com.example.kirchhoff.rxexample.ui.DelayOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.DistinctOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FilterOperatorActivity;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.throttleLast).setOnClickListener(this);
         findViewById(R.id.debounceOperator).setOnClickListener(this);
         findViewById(R.id.windowOperator).setOnClickListener(this);
+        findViewById(R.id.delayOperator).setOnClickListener(this);
     }
 
     @Override
@@ -190,6 +192,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.windowOperator:
                 WindowOperatorActivity.startMe(this);
+                break;
+
+            case R.id.delayOperator:
+                DelayOperatorActivity.startMe(this);
                 break;
         }
     }

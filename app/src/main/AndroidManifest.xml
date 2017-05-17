@@ -76,6 +76,8 @@
 
         <activity android:name=".ui.WindowOperatorActivity" />
 
+        <activity android:name=".ui.DelayOperatorActivity" />
+
     </application>
 
 </manifest>
