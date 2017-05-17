@@ -68,6 +68,8 @@
 
         <activity android:name=".ui.AsyncSubjectActivity" />
 
+        <activity android:name=".ui.ThrottleFirstActivity" />
+
     </application>
 
 </manifest>
