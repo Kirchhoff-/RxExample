@@ -184,6 +184,12 @@
             android:layout_height="wrap_content"
             android:text="Debounce operator" />
 
+        <Button
+            android:id="@+id/windowOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Window operator" />
+
     </LinearLayout>
 
 </ScrollView>

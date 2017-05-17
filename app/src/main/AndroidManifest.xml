@@ -74,6 +74,8 @@
 
         <activity android:name=".ui.DebounceOperatorActivity" />
 
+        <activity android:name=".ui.WindowOperatorActivity" />
+
     </application>
 
 </manifest>

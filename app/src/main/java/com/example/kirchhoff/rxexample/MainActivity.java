@@ -31,6 +31,7 @@ import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleFirstActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
 import com.example.kirchhoff.rxexample.ui.TimerActivity;
+import com.example.kirchhoff.rxexample.ui.WindowOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.throttleFirst).setOnClickListener(this);
         findViewById(R.id.throttleLast).setOnClickListener(this);
         findViewById(R.id.debounceOperator).setOnClickListener(this);
+        findViewById(R.id.windowOperator).setOnClickListener(this);
     }
 
     @Override
@@ -184,6 +186,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.debounceOperator:
                 DebounceOperatorActivity.startMe(this);
+                break;
+
+            case R.id.windowOperator:
+                WindowOperatorActivity.startMe(this);
                 break;
         }
     }
