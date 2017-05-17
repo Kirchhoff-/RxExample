@@ -35,168 +35,131 @@ import com.example.kirchhoff.rxexample.ui.TimerActivity;
 import com.example.kirchhoff.rxexample.ui.WindowOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        findViewById(R.id.firstExample).setOnClickListener(this);
-        findViewById(R.id.mapOperator).setOnClickListener(this);
-        findViewById(R.id.zipOperator).setOnClickListener(this);
-        findViewById(R.id.takeOperator).setOnClickListener(this);
-        findViewById(R.id.disposable).setOnClickListener(this);
-        findViewById(R.id.timer).setOnClickListener(this);
-        findViewById(R.id.interval).setOnClickListener(this);
-        findViewById(R.id.singleObserver).setOnClickListener(this);
-        findViewById(R.id.completableObserver).setOnClickListener(this);
-        findViewById(R.id.flowable).setOnClickListener(this);
-        findViewById(R.id.reduceOperator).setOnClickListener(this);
-        findViewById(R.id.bufferOperator).setOnClickListener(this);
-        findViewById(R.id.filterOperator).setOnClickListener(this);
-        findViewById(R.id.skipOperator).setOnClickListener(this);
-        findViewById(R.id.replayOperator).setOnClickListener(this);
-        findViewById(R.id.scanOperator).setOnClickListener(this);
-        findViewById(R.id.concatOperator).setOnClickListener(this);
-        findViewById(R.id.mergeOperator).setOnClickListener(this);
-        findViewById(R.id.deferObservable).setOnClickListener(this);
-        findViewById(R.id.distinctOperator).setOnClickListener(this);
-        findViewById(R.id.lastOperator).setOnClickListener(this);
-        findViewById(R.id.replaySubject).setOnClickListener(this);
-        findViewById(R.id.publishSubject).setOnClickListener(this);
-        findViewById(R.id.behaviorSubject).setOnClickListener(this);
-        findViewById(R.id.asyncSubject).setOnClickListener(this);
-        findViewById(R.id.throttleFirst).setOnClickListener(this);
-        findViewById(R.id.throttleLast).setOnClickListener(this);
-        findViewById(R.id.debounceOperator).setOnClickListener(this);
-        findViewById(R.id.windowOperator).setOnClickListener(this);
-        findViewById(R.id.delayOperator).setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.firstExample:
-                FirstActivity.startMe(this);
-                break;
+    public void firstExample(View view) {
+        FirstActivity.startMe(this);
+    }
 
-            case R.id.mapOperator:
-                MapOperatorActivity.startMe(this);
-                break;
+    public void mapOperatorExample(View view) {
+        MapOperatorActivity.startMe(this);
+    }
 
-            case R.id.zipOperator:
-                ZipOperatorActivity.startMe(this);
-                break;
+    public void zipOperatorExample(View view) {
+        ZipOperatorActivity.startMe(this);
+    }
 
-            case R.id.disposable:
-                DisposableActivity.startMe(this);
-                break;
+    public void disposableOperatorExample(View view) {
+        DisposableActivity.startMe(this);
+    }
 
-            case R.id.takeOperator:
-                TakeOperatorActivity.startMe(this);
-                break;
+    public void takeOperatorExample(View view) {
+        TakeOperatorActivity.startMe(this);
+    }
 
-            case R.id.timer:
-                TimerActivity.startMe(this);
-                break;
+    public void timerExample(View view) {
+        TimerActivity.startMe(this);
+    }
 
-            case R.id.interval:
-                IntervalActivity.startMe(this);
-                break;
+    public void intervalExample(View view) {
+        IntervalActivity.startMe(this);
+    }
 
-            case R.id.singleObserver:
-                SingleObserverActivity.startMe(this);
-                break;
+    public void singleObserverExample(View view) {
+        SingleObserverActivity.startMe(this);
+    }
 
-            case R.id.completableObserver:
-                CompletableObserverActivity.startMe(this);
-                break;
+    public void completableObserverExample(View view) {
+        CompletableObserverActivity.startMe(this);
+    }
 
-            case R.id.flowable:
-                FlowableActivity.startMe(this);
-                break;
+    public void flowableExample(View view) {
+        FlowableActivity.startMe(this);
+    }
 
-            case R.id.reduceOperator:
-                ReduceOperatorActivity.startMe(this);
-                break;
+    public void reduceOperatorExample(View view) {
+        ReduceOperatorActivity.startMe(this);
+    }
 
-            case R.id.bufferOperator:
-                BufferOperatorActivity.startMe(this);
-                break;
+    public void bufferOperatorExample(View view) {
+        BufferOperatorActivity.startMe(this);
+    }
 
-            case R.id.filterOperator:
-                FilterOperatorActivity.startMe(this);
-                break;
+    public void filterOperatorExample(View view) {
+        FilterOperatorActivity.startMe(this);
+    }
 
-            case R.id.skipOperator:
-                SkipOperatorActivity.startMe(this);
-                break;
+    public void skipOperatorExample(View view) {
+        SkipOperatorActivity.startMe(this);
+    }
 
-            case R.id.scanOperator:
-                ScanOperatorActivity.startMe(this);
-                break;
+    public void scanOperatorExample(View view) {
+        ScanOperatorActivity.startMe(this);
+    }
 
-            case R.id.replayOperator:
-                ReplayOperatorActivity.startMe(this);
-                break;
+    public void replayOperatorExample(View view) {
+        ReplayOperatorActivity.startMe(this);
+    }
 
-            case R.id.concatOperator:
-                ConcatOperatorActivity.startMe(this);
-                break;
+    public void concatOperatorExample(View view) {
+        ConcatOperatorActivity.startMe(this);
+    }
 
-            case R.id.mergeOperator:
-                MergeOperatorActivity.startMe(this);
-                break;
+    public void mergeOperatorExample(View view) {
+        MergeOperatorActivity.startMe(this);
+    }
 
-            case R.id.deferObservable:
-                DeferObservableActivity.startMe(this);
-                break;
+    public void deferOperatorExample(View view) {
+        DeferObservableActivity.startMe(this);
+    }
 
-            case R.id.distinctOperator:
-                DistinctOperatorActivity.startMe(this);
-                break;
+    public void distinctOperatorExample(View view) {
+        DistinctOperatorActivity.startMe(this);
+    }
 
-            case R.id.lastOperator:
-                LastOperatorActivity.startMe(this);
-                break;
+    public void lastOperatorExample(View view) {
+        LastOperatorActivity.startMe(this);
+    }
 
-            case R.id.replaySubject:
-                ReplaySubjectActivity.startMe(this);
-                break;
+    public void replaySubjectExample(View view) {
+        ReplaySubjectActivity.startMe(this);
+    }
 
-            case R.id.publishSubject:
-                PublishSubjectActivity.startMe(this);
-                break;
+    public void publishSubjectExample(View view) {
+        PublishSubjectActivity.startMe(this);
+    }
 
-            case R.id.behaviorSubject:
-                BehaviorSubjectActivity.startMe(this);
-                break;
+    public void behaviorSubjectExample(View view) {
+        BehaviorSubjectActivity.startMe(this);
+    }
 
-            case R.id.asyncSubject:
-                AsyncSubjectActivity.startMe(this);
-                break;
+    public void asyncSubjectExample(View view) {
+        AsyncSubjectActivity.startMe(this);
+    }
 
-            case R.id.throttleFirst:
-                ThrottleFirstActivity.startMe(this);
-                break;
+    public void throttleFirstExample(View view) {
+        ThrottleFirstActivity.startMe(this);
+    }
 
-            case R.id.throttleLast:
-                ThrottleLastActivity.startMe(this);
-                break;
+    public void throttleLastExample(View view) {
+        ThrottleLastActivity.startMe(this);
+    }
 
-            case R.id.debounceOperator:
-                DebounceOperatorActivity.startMe(this);
-                break;
+    public void debounceOperatorExample(View view) {
+        DebounceOperatorActivity.startMe(this);
+    }
 
-            case R.id.windowOperator:
-                WindowOperatorActivity.startMe(this);
-                break;
+    public void windowOperatorExample(View view) {
+        WindowOperatorActivity.startMe(this);
+    }
 
-            case R.id.delayOperator:
-                DelayOperatorActivity.startMe(this);
-                break;
-        }
+    public void delayOperatorExample(View view) {
+        DelayOperatorActivity.startMe(this);
     }
 }
