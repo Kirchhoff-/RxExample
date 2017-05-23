@@ -35,6 +35,7 @@ import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
 import com.example.kirchhoff.rxexample.ui.TimerActivity;
 import com.example.kirchhoff.rxexample.ui.WindowOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.pagination.PaginationActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -166,5 +167,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void rangeOperatorExample(View view) {
         RangeOperatorActivity.startMe(this);
+    }
+
+    public void paginationExample(View view) {
+        PaginationActivity.startMe(this);
     }
 }

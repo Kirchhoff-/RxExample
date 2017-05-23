@@ -142,6 +142,10 @@
             android:name=".ui.RangeOperatorActivity"
             android:label="@string/range.operator" />
 
+        <activity
+            android:name=".ui.pagination.PaginationActivity"
+            android:label="@string/pagination.title" />
+
     </application>
 
 </manifest>

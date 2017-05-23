@@ -31,4 +31,7 @@
     <string name="window.operator">Window operator</string>
     <string name="delay.operator">Delay operator</string>
     <string name="range.operator">Range operator</string>
+
+    <string name="pagination.title">Pagination Example</string>
+    <string name="pagination">Pagination</string>
 </resources>
