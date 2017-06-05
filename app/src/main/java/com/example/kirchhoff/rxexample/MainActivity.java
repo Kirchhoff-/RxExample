@@ -17,6 +17,7 @@ import com.example.kirchhoff.rxexample.ui.DistinctOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.FlowableActivity;
+import com.example.kirchhoff.rxexample.ui.GroupBuyOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.LastOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
@@ -171,5 +172,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void paginationExample(View view) {
         PaginationActivity.startMe(this);
+    }
+
+    public void groupByOperatorExample(View view) {
+        GroupBuyOperatorActivity.startMe(this);
     }
 }

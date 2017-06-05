@@ -146,6 +146,10 @@
             android:name=".ui.pagination.PaginationActivity"
             android:label="@string/pagination.title" />
 
+        <activity
+            android:name=".ui.GroupBuyOperatorActivity"
+            android:label="@string/group.by.operator" />
+
     </application>
 
 </manifest>
