@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kirchhoff.rxexample">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -149,6 +151,10 @@
         <activity
             android:name=".ui.GroupBuyOperatorActivity"
             android:label="@string/group.by.operator" />
+
+        <activity
+            android:name=".network.RxStreamingActivity"
+            android:label="@string/rx.streaming" />
 
     </application>
 
