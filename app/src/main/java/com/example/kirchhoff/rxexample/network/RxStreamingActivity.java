@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
-import com.example.kirchhoff.rxexample.network.model.Feature;
+import com.example.kirchhoff.rxexample.network.model.stream.Feature;
 import com.example.kirchhoff.rxexample.network.rest.HugeJsonApi;
 import com.example.kirchhoff.rxexample.utils.RestUtils;
 import com.google.gson.Gson;
