@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.network;
+package com.example.kirchhoff.rxexample.network.screen;
 
 import android.content.Context;
 import android.content.Intent;

@@ -153,9 +153,12 @@
             android:label="@string/group.by.operator" />
 
         <activity
-            android:name=".network.RxStreamingActivity"
+            android:name=".network.screen.RxStreamingActivity"
             android:label="@string/rx.streaming" />
 
+        <activity
+            android:name=".network.screen.country.CountryActivity"
+            android:label="@string/rx.databinding" />
     </application>
 
 </manifest>

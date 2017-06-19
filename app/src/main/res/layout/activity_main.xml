@@ -218,6 +218,12 @@
             android:onClick="rxStreaming"
             android:text="@string/rx.streaming" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="rxDatabinding"
+            android:text="@string/rx.databinding" />
+
     </LinearLayout>
 
 </ScrollView>

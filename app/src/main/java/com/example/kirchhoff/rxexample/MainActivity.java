@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.kirchhoff.rxexample.network.RxStreamingActivity;
+import com.example.kirchhoff.rxexample.network.screen.RxStreamingActivity;
+import com.example.kirchhoff.rxexample.network.screen.country.CountryActivity;
 import com.example.kirchhoff.rxexample.ui.AsyncSubjectActivity;
 import com.example.kirchhoff.rxexample.ui.BehaviorSubjectActivity;
 import com.example.kirchhoff.rxexample.ui.BufferOperatorActivity;
@@ -181,5 +182,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void rxStreaming(View view) {
         RxStreamingActivity.startMe(this);
+    }
+
+    public void rxDatabinding(View view) {
+        CountryActivity.start(this);
     }
 }

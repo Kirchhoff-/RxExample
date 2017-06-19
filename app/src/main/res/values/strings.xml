@@ -37,4 +37,7 @@
     <string name="pagination">Pagination</string>
 
     <string name="rx.streaming">RxStreaming</string>
+
+    <string name="rx.databinding">RxDatabinding</string>
+    <string name="search">Search</string>
 </resources>
