@@ -2,29 +2,17 @@ package com.example.kirchhoff.rxexample.ui.operators.creating;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.TextView;
 
-import com.example.kirchhoff.rxexample.R;
 import com.example.kirchhoff.rxexample.data.Team;
-import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.BaseOperatorActivity;
 
 import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 /**
  * @author Kirchhoff-
  */
 
-public class DeferOperatorActivity extends AppCompatActivity {
-
-    private static final String TAG = FirstOperatorActivity.class.getName();
-
-    private TextView textView;
+public class DeferOperatorActivity extends BaseOperatorActivity {
 
     public static void startMe(Activity activity) {
         Intent intent = new Intent(activity, DeferOperatorActivity.class);
@@ -32,13 +20,13 @@ public class DeferOperatorActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_base);
+    protected void operatorExample() {
+        deferExample();
+    }
 
-        textView = (TextView) findViewById(R.id.textView);
-
-        findViewById(R.id.button).setOnClickListener(view -> deferExample());
+    @Override
+    protected String getTag() {
+        return DeferOperatorActivity.class.getName();
     }
 
     /*
@@ -55,36 +43,7 @@ public class DeferOperatorActivity extends AppCompatActivity {
         // Even if we are setting the team name after creating Observable
         // we will get it
         // If we had not used defer, we would have got null as the brand.
-        brandDeferObservable.subscribe(getObserver());
+        brandDeferObservable.subscribe(getStringObserver());
     }
 
-    private Observer<String> getObserver() {
-        return new Observer<String>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
-            }
-
-            @Override
-            public void onNext(String value) {
-                textView.append(" onNext : value : " + value);
-                textView.append("\n");
-                Log.d(TAG, " onNext : value : " + value);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                textView.append(" onError : " + e.getMessage());
-                textView.append("\n");
-                Log.d(TAG, " onError : " + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                textView.append(" onComplete");
-                textView.append("\n");
-                Log.d(TAG, " onComplete");
-            }
-        };
-    }
 }
