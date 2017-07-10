@@ -40,7 +40,7 @@ public class TimerOperatorActivity extends BaseOperatorActivity {
                 .subscribeOn(Schedulers.io())
                 //Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(getObserver());
+                .subscribe(getLongObserver());
     }
 
     private Observable<? extends Long> getObservable() {

@@ -2,32 +2,20 @@ package com.example.kirchhoff.rxexample.ui.operators.creating;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.TextView;
 
-import com.example.kirchhoff.rxexample.R;
-import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.BaseOperatorActivity;
 
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author Kirchhoff-
  */
 
-public class IntervalOperatorActivity extends AppCompatActivity {
-
-    private static final String TAG = FirstOperatorActivity.class.getName();
-    private final CompositeDisposable disposables = new CompositeDisposable();
-    private TextView textView;
+public class IntervalOperatorActivity extends BaseOperatorActivity {
 
     public static void startMe(Activity activity) {
         Intent intent = new Intent(activity, IntervalOperatorActivity.class);
@@ -35,56 +23,24 @@ public class IntervalOperatorActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_base);
-
-        textView = (TextView) findViewById(R.id.textView);
-
-        findViewById(R.id.button).setOnClickListener(view -> disposableExample());
+    protected void operatorExample() {
+        intervalExample();
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        disposables.clear();
+    protected String getTag() {
+        return IntervalOperatorActivity.class.getName();
     }
 
-
-    private void disposableExample() {
-        disposables.add(getObservable()
+    private void intervalExample() {
+        getDisposable().add(getObservable()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(getObserver()));
+                .subscribeWith(getLongDisposableObserver()));
     }
 
     private Observable<? extends Long> getObservable() {
         return Observable.interval(0, 2, TimeUnit.SECONDS);
-    }
-
-    private DisposableObserver<Long> getObserver() {
-        return new DisposableObserver<Long>() {
-            @Override
-            public void onNext(Long value) {
-                textView.append(" onNext : value : " + value);
-                textView.append("\n");
-                Log.d(TAG, " onNext : value : " + value);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                textView.append(" onError : " + e.getMessage());
-                textView.append("\n");
-                Log.d(TAG, " onError : " + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                textView.append(" onComplete");
-                textView.append("\n");
-                Log.d(TAG, " onComplete");
-            }
-        };
     }
 
 }
