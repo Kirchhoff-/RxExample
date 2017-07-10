@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.transforming;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.kirchhoff.rxexample.R;
 import com.example.kirchhoff.rxexample.data.ApiUser;
 import com.example.kirchhoff.rxexample.data.User;
+import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.utils.UserUtils;
 
 import java.util.List;

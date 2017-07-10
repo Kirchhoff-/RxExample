@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.transforming;
 
 import android.app.Activity;
 import android.content.Intent;

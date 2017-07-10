@@ -25,7 +25,7 @@
             android:label="@string/first" />
 
         <activity
-            android:name=".ui.MapOperatorActivity"
+            android:name=".ui.operators.transforming.MapOperatorActivity"
             android:label="@string/map.operator" />
 
         <activity
@@ -65,7 +65,7 @@
             android:label="@string/reduce.operator" />
 
         <activity
-            android:name=".ui.BufferOperatorActivity"
+            android:name=".ui.operators.transforming.BufferOperatorActivity"
             android:label="@string/buffer.operator" />
 
         <activity
@@ -81,7 +81,7 @@
             android:label="@string/replay.operator" />
 
         <activity
-            android:name=".ui.ScanOperatorActivity"
+            android:name=".ui.operators.transforming.ScanOperatorActivity"
             android:label="@string/scan.operator" />
 
         <activity
@@ -133,7 +133,7 @@
             android:label="@string/debounce.operator" />
 
         <activity
-            android:name=".ui.WindowOperatorActivity"
+            android:name=".ui.operators.transforming.WindowOperatorActivity"
             android:label="@string/window.operator" />
 
         <activity
@@ -149,7 +149,7 @@
             android:label="@string/pagination.title" />
 
         <activity
-            android:name=".ui.GroupBuyOperatorActivity"
+            android:name=".ui.operators.transforming.GroupBuyOperatorActivity"
             android:label="@string/group.by.operator" />
 
         <activity
