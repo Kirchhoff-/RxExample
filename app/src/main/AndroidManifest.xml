@@ -167,6 +167,11 @@
         <activity
             android:name=".ui.operators.creating.RepeatWhenOperatorActivity"
             android:label="@string/repeat.when.operator" />
+
+        <activity
+            android:name=".ui.operators.transforming.FlatMapOperatorActivity"
+            android:label="@string/flat.map.operator" />
+
     </application>
 
 </manifest>

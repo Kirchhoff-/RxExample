@@ -220,9 +220,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="flatMapOperatorExample"
+            android:text="@string/flat.map.operator" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="paginationExample"
             android:text="@string/pagination" />
-
 
         <Button
             android:layout_width="match_parent"

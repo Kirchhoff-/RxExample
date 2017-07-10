@@ -36,6 +36,7 @@ import com.example.kirchhoff.rxexample.ui.operators.creating.RepeatOperatorActiv
 import com.example.kirchhoff.rxexample.ui.operators.creating.RepeatWhenOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.TimerOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.BufferOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.transforming.FlatMapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.GroupBuyOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.ScanOperatorActivity;
@@ -196,5 +197,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void repeatWhenOperatorExample(View view) {
         RepeatWhenOperatorActivity.startMe(this);
+    }
+
+    public void flatMapOperatorExample(View view) {
+        FlatMapOperatorActivity.startMe(this);
     }
 }
