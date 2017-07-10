@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 
 import io.reactivex.Flowable;
 import io.reactivex.SingleObserver;
@@ -20,7 +21,7 @@ import io.reactivex.disposables.Disposable;
 
 public class FlowableActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 

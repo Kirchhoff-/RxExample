@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.filtering;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
-import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -19,14 +18,14 @@ import io.reactivex.disposables.Disposable;
  * @author Kirchhoff-
  */
 
-public class ConcatOperatorActivity extends AppCompatActivity {
+public class FilterOperatorActivity extends AppCompatActivity {
 
     private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, ConcatOperatorActivity.class);
+        Intent intent = new Intent(activity, FilterOperatorActivity.class);
         activity.startActivity(intent);
     }
 
@@ -37,38 +36,36 @@ public class ConcatOperatorActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> concatExample());
+        findViewById(R.id.button).setOnClickListener(view -> filterExample());
     }
 
-    /*
-     * Using concat operator to combine Observable : concat maintain
-     * the order of Observable.
-     * first all from the first Observable and then
-     * all from the second Observable all in order
-     */
-    private void concatExample() {
-        String[] firstSource = {"First1", "First2", "First3", "First4"};
-        String[] secondSource = {"Second1", "Second2", "Second3", "Second4"};
+    private void filterExample() {
+        /*Observable.just(1,2,3,4,5,6).filter(new Predicate<Integer>() {
+            @Override
+            public boolean test(@NonNull Integer integer) throws Exception {
+                return integer % 2 == 1;
+            }
+        }).subscribe(getObserver()); */
 
-        Observable<String> firstObservable = Observable.fromArray(firstSource);
-        Observable<String> secondObservable = Observable.fromArray(secondSource);
-
-        Observable.concat(firstObservable, secondObservable)
+        Observable.just(1, 2, 3, 4, 5, 6).filter(integer -> integer % 2 == 1)
                 .subscribe(getObserver());
     }
 
-    private Observer<String> getObserver() {
-        return new Observer<String>() {
+    private Observer<Integer> getObserver() {
+        return new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
-            public void onNext(String value) {
-                textView.append(" onNext : value : " + value);
+            public void onNext(Integer value) {
+                textView.append(" onNext : ");
                 textView.append("\n");
-                Log.d(TAG, " onNext : value : " + value);
+                textView.append(" value : " + value);
+                textView.append("\n");
+                Log.d(TAG, " onNext ");
+                Log.d(TAG, " value : " + value);
             }
 
             @Override

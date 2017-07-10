@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.filtering;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
 
-import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -22,17 +20,16 @@ import io.reactivex.schedulers.Schedulers;
  * @author Kirchhoff-
  */
 
-public class DebounceOperatorActivity extends AppCompatActivity {
+public class FirstOperatorActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, DebounceOperatorActivity.class);
+        Intent intent = new Intent(activity, FirstOperatorActivity.class);
         activity.startActivity(intent);
     }
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,52 +38,36 @@ public class DebounceOperatorActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> debounceExample());
+        findViewById(R.id.button).setOnClickListener(view -> emitValues());
     }
 
-    /*
-   * Using debounce() -> only emit an item from an Observable if a particular time-span has
-   * passed without it emitting another item */
-    private void debounceExample() {
+
+    private void emitValues() {
         getObservable()
-                .debounce(500, TimeUnit.MILLISECONDS)
+                // Run on a background thread
                 .subscribeOn(Schedulers.io())
+                // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(getObserver());
     }
 
-    private Observable<Integer> getObservable() {
-        return Observable.create(emitter -> {
-            // send events with simulated time wait
-            emitter.onNext(1); // skip
-            Thread.sleep(400);
-            emitter.onNext(2); // deliver
-            Thread.sleep(505);
-            emitter.onNext(3); // skip
-            Thread.sleep(100);
-            emitter.onNext(4); // deliver
-            Thread.sleep(605);
-            emitter.onNext(5); // deliver
-            Thread.sleep(510);
-            emitter.onComplete();
-        });
+
+    private Observable<String> getObservable() {
+        return Observable.just("Value 1", "Value 2");
     }
 
-    private Observer<Integer> getObserver() {
-        return new Observer<Integer>() {
+    private Observer<String> getObserver() {
+        return new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
+                Log.d(TAG, "onSubscribe :" + d.isDisposed());
             }
 
             @Override
-            public void onNext(Integer value) {
-                textView.append(" onNext : ");
+            public void onNext(String s) {
+                textView.append(" onNext : value :" + s);
                 textView.append("\n");
-                textView.append(" value : " + value);
-                textView.append("\n");
-                Log.d(TAG, " onNext ");
-                Log.d(TAG, " value : " + value);
+                Log.d(TAG, " onNext : value : " + s);
             }
 
             @Override

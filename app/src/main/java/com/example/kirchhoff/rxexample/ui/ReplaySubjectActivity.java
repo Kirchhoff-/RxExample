@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -20,7 +21,7 @@ import io.reactivex.subjects.ReplaySubject;
 
 public class ReplaySubjectActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 

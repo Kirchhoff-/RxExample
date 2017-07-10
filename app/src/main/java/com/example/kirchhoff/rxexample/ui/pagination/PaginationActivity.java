@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.example.kirchhoff.rxexample.R;
-import com.example.kirchhoff.rxexample.ui.FirstActivity;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 
 import org.reactivestreams.Publisher;
 
@@ -33,7 +33,7 @@ import io.reactivex.processors.PublishProcessor;
 
 public class PaginationActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
     private final int VISIBLE_THRESHOLD = 1;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private PublishProcessor<Integer> paginator = PublishProcessor.create();

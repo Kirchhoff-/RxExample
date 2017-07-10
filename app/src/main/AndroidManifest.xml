@@ -21,7 +21,7 @@
 
 
         <activity
-            android:name=".ui.FirstActivity"
+            android:name=".ui.operators.filtering.FirstOperatorActivity"
             android:label="@string/first" />
 
         <activity
@@ -37,7 +37,7 @@
             android:label="@string/disposable.operator" />
 
         <activity
-            android:name=".ui.TakeOperatorActivity"
+            android:name=".ui.operators.filtering.TakeOperatorActivity"
             android:label="@string/take.operator" />
 
         <activity
@@ -69,11 +69,11 @@
             android:label="@string/buffer.operator" />
 
         <activity
-            android:name=".ui.FilterOperatorActivity"
+            android:name=".ui.operators.filtering.FilterOperatorActivity"
             android:label="@string/filter.operator" />
 
         <activity
-            android:name=".ui.SkipOperatorActivity"
+            android:name=".ui.operators.filtering.SkipOperatorActivity"
             android:label="@string/skip.operator" />
 
         <activity
@@ -97,11 +97,11 @@
             android:label="@string/defer.observable" />
 
         <activity
-            android:name=".ui.DistinctOperatorActivity"
+            android:name=".ui.operators.filtering.DistinctOperatorActivity"
             android:label="@string/distinct.operator" />
 
         <activity
-            android:name=".ui.LastOperatorActivity"
+            android:name=".ui.operators.filtering.LastOperatorActivity"
             android:label="@string/last.operator" />
 
         <activity
@@ -129,7 +129,7 @@
             android:label="@string/throttle.last" />
 
         <activity
-            android:name=".ui.DebounceOperatorActivity"
+            android:name=".ui.operators.filtering.DebounceOperatorActivity"
             android:label="@string/debounce.operator" />
 
         <activity

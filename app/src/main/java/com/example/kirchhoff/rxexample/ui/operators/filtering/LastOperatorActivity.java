@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.filtering;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,21 +11,21 @@ import android.widget.TextView;
 import com.example.kirchhoff.rxexample.R;
 
 import io.reactivex.Observable;
-import io.reactivex.Observer;
+import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 
 /**
  * @author Kirchhoff-
  */
 
-public class DistinctOperatorActivity extends AppCompatActivity {
+public class LastOperatorActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, DistinctOperatorActivity.class);
+        Intent intent = new Intent(activity, LastOperatorActivity.class);
         activity.startActivity(intent);
     }
 
@@ -36,30 +36,27 @@ public class DistinctOperatorActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> distinctExample());
+        findViewById(R.id.button).setOnClickListener(view -> lastExample());
     }
 
-
-    private void distinctExample() {
-
-        getObservable()
-                .distinct()
+    private void lastExample() {
+        getObservable().last("Default Value")
                 .subscribe(getObserver());
     }
 
-    private Observable<Integer> getObservable() {
-        return Observable.just(1, 2, 3, 4, 1, 1, 2, 7, 12, 3);
+    private Observable<String> getObservable() {
+        return Observable.just("Value1", "Value2", "Value3", "Value4", "Value5", "Value6", "Value7");
     }
 
-    private Observer<Integer> getObserver() {
-        return new Observer<Integer>() {
+    private SingleObserver<String> getObserver() {
+        return new SingleObserver<String>() {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
-            public void onNext(Integer value) {
+            public void onSuccess(String value) {
                 textView.append(" onNext : value : " + value);
                 textView.append("\n");
                 Log.d(TAG, " onNext value : " + value);
@@ -67,12 +64,9 @@ public class DistinctOperatorActivity extends AppCompatActivity {
 
             @Override
             public void onError(Throwable e) {
+                textView.append(" onError : " + e.getMessage());
+                textView.append("\n");
                 Log.d(TAG, " onError : " + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                Log.d(TAG, " onComplete");
             }
         };
     }

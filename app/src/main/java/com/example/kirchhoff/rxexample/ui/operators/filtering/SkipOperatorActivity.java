@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.filtering;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
 
+import java.util.Random;
+
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -20,14 +22,14 @@ import io.reactivex.schedulers.Schedulers;
  * @author Kirchhoff-
  */
 
-public class TakeOperatorActivity extends AppCompatActivity {
+public class SkipOperatorActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, TakeOperatorActivity.class);
+        Intent intent = new Intent(activity, SkipOperatorActivity.class);
         activity.startActivity(intent);
     }
 
@@ -38,19 +40,14 @@ public class TakeOperatorActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> takeExample());
+        findViewById(R.id.button).setOnClickListener(view -> skipExample());
     }
 
-    /* Using take operator, it only emits
-       * required number of values. here only 3 out of 5
-       */
-    private void takeExample() {
+    private void skipExample() {
         getObservable()
-                // Run on a background thread
                 .subscribeOn(Schedulers.io())
-                // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
-                .take(3)
+                .skip(new Random().nextInt(4))
                 .subscribe(getObserver());
     }
 
@@ -60,6 +57,7 @@ public class TakeOperatorActivity extends AppCompatActivity {
 
     private Observer<Integer> getObserver() {
         return new Observer<Integer>() {
+
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, " onSubscribe : " + d.isDisposed());
@@ -87,4 +85,5 @@ public class TakeOperatorActivity extends AppCompatActivity {
             }
         };
     }
+
 }

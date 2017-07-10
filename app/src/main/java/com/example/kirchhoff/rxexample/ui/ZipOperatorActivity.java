@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
 import com.example.kirchhoff.rxexample.data.User;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 import com.example.kirchhoff.rxexample.utils.UserUtils;
 
 import java.util.List;
@@ -28,7 +29,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class ZipOperatorActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 

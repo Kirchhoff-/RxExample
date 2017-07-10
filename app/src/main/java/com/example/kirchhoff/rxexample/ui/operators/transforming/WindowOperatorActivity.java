@@ -9,7 +9,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
-import com.example.kirchhoff.rxexample.ui.FirstActivity;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class WindowOperatorActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 

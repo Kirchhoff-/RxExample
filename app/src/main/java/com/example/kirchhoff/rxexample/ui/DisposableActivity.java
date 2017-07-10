@@ -10,6 +10,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -23,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class DisposableActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
     private final CompositeDisposable disposables = new CompositeDisposable();
     private TextView textView;
 

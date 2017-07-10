@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.filtering;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -20,14 +20,14 @@ import io.reactivex.schedulers.Schedulers;
  * @author Kirchhoff-
  */
 
-public class FirstActivity extends AppCompatActivity {
+public class TakeOperatorActivity extends AppCompatActivity {
 
-    private static final String TAG = FirstActivity.class.getName();
+    private static final String TAG = FirstOperatorActivity.class.getName();
 
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, FirstActivity.class);
+        Intent intent = new Intent(activity, TakeOperatorActivity.class);
         activity.startActivity(intent);
     }
 
@@ -38,36 +38,38 @@ public class FirstActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> emitValues());
+        findViewById(R.id.button).setOnClickListener(view -> takeExample());
     }
 
-
-    private void emitValues() {
+    /* Using take operator, it only emits
+       * required number of values. here only 3 out of 5
+       */
+    private void takeExample() {
         getObservable()
                 // Run on a background thread
                 .subscribeOn(Schedulers.io())
                 // Be notified on the main thread
                 .observeOn(AndroidSchedulers.mainThread())
+                .take(3)
                 .subscribe(getObserver());
     }
 
-
-    private Observable<String> getObservable() {
-        return Observable.just("Value 1", "Value 2");
+    private Observable<Integer> getObservable() {
+        return Observable.just(1, 2, 3, 4, 5);
     }
 
-    private Observer<String> getObserver() {
-        return new Observer<String>() {
+    private Observer<Integer> getObserver() {
+        return new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, "onSubscribe :" + d.isDisposed());
+                Log.d(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
-            public void onNext(String s) {
-                textView.append(" onNext : value :" + s);
+            public void onNext(Integer value) {
+                textView.append(" onNext : value : " + value);
                 textView.append("\n");
-                Log.d(TAG, " onNext : value : " + s);
+                Log.d(TAG, " onNext value : " + value);
             }
 
             @Override
