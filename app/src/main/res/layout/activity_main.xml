@@ -208,6 +208,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="repeatOperatorExample"
+            android:text="@string/repeat.operator" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="paginationExample"
             android:text="@string/pagination" />
 
@@ -223,6 +229,7 @@
             android:layout_height="wrap_content"
             android:onClick="rxDatabinding"
             android:text="@string/rx.databinding" />
+
 
     </LinearLayout>
 

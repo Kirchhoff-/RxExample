@@ -159,6 +159,10 @@
         <activity
             android:name=".network.screen.country.CountryActivity"
             android:label="@string/rx.databinding" />
+
+        <activity
+            android:name=".ui.operators.creating.RepeatOperatorActivity"
+            android:label="@string/repeat.operator" />
     </application>
 
 </manifest>
