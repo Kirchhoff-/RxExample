@@ -41,11 +41,11 @@
             android:label="@string/take.operator" />
 
         <activity
-            android:name=".ui.TimerActivity"
+            android:name=".ui.operators.creating.TimerOperatorActivity"
             android:label="@string/timer" />
 
         <activity
-            android:name=".ui.IntervalActivity"
+            android:name=".ui.operators.creating.IntervalOperatorActivity"
             android:label="@string/interval" />
 
         <activity
@@ -93,7 +93,7 @@
             android:label="@string/merge.operator" />
 
         <activity
-            android:name=".ui.DeferObservableActivity"
+            android:name=".ui.operators.creating.DeferOperatorActivity"
             android:label="@string/defer.observable" />
 
         <activity
@@ -141,7 +141,7 @@
             android:label="@string/delay.operator" />
 
         <activity
-            android:name=".ui.RangeOperatorActivity"
+            android:name=".ui.operators.creating.RangeOperatorActivity"
             android:label="@string/range.operator" />
 
         <activity

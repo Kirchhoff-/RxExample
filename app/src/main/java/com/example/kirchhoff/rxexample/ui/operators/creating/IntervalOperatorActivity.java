@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.creating;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
+import com.example.kirchhoff.rxexample.ui.FirstActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,14 +23,14 @@ import io.reactivex.schedulers.Schedulers;
  * @author Kirchhoff-
  */
 
-public class IntervalActivity extends AppCompatActivity {
+public class IntervalOperatorActivity extends AppCompatActivity {
 
     private static final String TAG = FirstActivity.class.getName();
     private final CompositeDisposable disposables = new CompositeDisposable();
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, IntervalActivity.class);
+        Intent intent = new Intent(activity, IntervalOperatorActivity.class);
         activity.startActivity(intent);
     }
 

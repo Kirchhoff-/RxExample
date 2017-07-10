@@ -1,4 +1,4 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.creating;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,24 +9,29 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.kirchhoff.rxexample.R;
-import com.example.kirchhoff.rxexample.data.Team;
+import com.example.kirchhoff.rxexample.ui.FirstActivity;
+
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author Kirchhoff-
  */
 
-public class DeferObservableActivity extends AppCompatActivity {
+public class TimerOperatorActivity extends AppCompatActivity {
 
     private static final String TAG = FirstActivity.class.getName();
 
     private TextView textView;
 
     public static void startMe(Activity activity) {
-        Intent intent = new Intent(activity, DeferObservableActivity.class);
+        Intent intent = new Intent(activity, TimerOperatorActivity.class);
         activity.startActivity(intent);
     }
 
@@ -37,35 +42,34 @@ public class DeferObservableActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.textView);
 
-        findViewById(R.id.button).setOnClickListener(view -> deferExample());
+        findViewById(R.id.button).setOnClickListener(view -> timerExample());
     }
 
-    /*
-     * Defer used for Deferring Observable code until subscription in RxJava
-     */
-    private void deferExample() {
-
-        Team team = new Team();
-
-        Observable<String> brandDeferObservable = team.brandDeferObservable();
-
-        team.setTeamName("LA Lakers");
-
-        // Even if we are setting the team name after creating Observable
-        // we will get it
-        // If we had not used defer, we would have got null as the brand.
-        brandDeferObservable.subscribe(getObserver());
+    /* Do something after 2 second */
+    private void timerExample() {
+        getObservable()
+                //Run on a background thread
+                .subscribeOn(Schedulers.io())
+                //Be notified on the main thread
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(getObserver());
     }
 
-    private Observer<String> getObserver() {
-        return new Observer<String>() {
+    private Observable<? extends Long> getObservable() {
+        return Observable.timer(2, TimeUnit.SECONDS)
+                .flatMap(i -> Observable.just(new Random().nextLong()));
+    }
+
+    private Observer<Long> getObserver() {
+        return new Observer<Long>() {
+
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, " onSubscribe : " + d.isDisposed());
             }
 
             @Override
-            public void onNext(String value) {
+            public void onNext(Long value) {
                 textView.append(" onNext : value : " + value);
                 textView.append("\n");
                 Log.d(TAG, " onNext : value : " + value);

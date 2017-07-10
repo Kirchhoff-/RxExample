@@ -12,7 +12,6 @@ import com.example.kirchhoff.rxexample.ui.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.CompletableObserverActivity;
 import com.example.kirchhoff.rxexample.ui.ConcatOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.DebounceOperatorActivity;
-import com.example.kirchhoff.rxexample.ui.DeferObservableActivity;
 import com.example.kirchhoff.rxexample.ui.DelayOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.DisposableActivity;
 import com.example.kirchhoff.rxexample.ui.DistinctOperatorActivity;
@@ -20,12 +19,10 @@ import com.example.kirchhoff.rxexample.ui.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.FirstActivity;
 import com.example.kirchhoff.rxexample.ui.FlowableActivity;
 import com.example.kirchhoff.rxexample.ui.GroupBuyOperatorActivity;
-import com.example.kirchhoff.rxexample.ui.IntervalActivity;
 import com.example.kirchhoff.rxexample.ui.LastOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.MergeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.PublishSubjectActivity;
-import com.example.kirchhoff.rxexample.ui.RangeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReduceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplayOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ReplaySubjectActivity;
@@ -35,9 +32,12 @@ import com.example.kirchhoff.rxexample.ui.SkipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.TakeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleFirstActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
-import com.example.kirchhoff.rxexample.ui.TimerActivity;
 import com.example.kirchhoff.rxexample.ui.WindowOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.creating.DeferOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.creating.IntervalOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.creating.RangeOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.creating.TimerOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.pagination.PaginationActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -69,11 +69,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void timerExample(View view) {
-        TimerActivity.startMe(this);
+        TimerOperatorActivity.startMe(this);
     }
 
     public void intervalExample(View view) {
-        IntervalActivity.startMe(this);
+        IntervalOperatorActivity.startMe(this);
     }
 
     public void singleObserverExample(View view) {
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void deferOperatorExample(View view) {
-        DeferObservableActivity.startMe(this);
+        DeferOperatorActivity.startMe(this);
     }
 
     public void distinctOperatorExample(View view) {
