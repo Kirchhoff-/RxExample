@@ -163,6 +163,10 @@
         <activity
             android:name=".ui.operators.creating.RepeatOperatorActivity"
             android:label="@string/repeat.operator" />
+
+        <activity
+            android:name=".ui.operators.creating.RepeatWhenOperatorActivity"
+            android:label="@string/repeat.when.operator" />
     </application>
 
 </manifest>

@@ -38,6 +38,7 @@ import com.example.kirchhoff.rxexample.ui.operators.creating.DeferOperatorActivi
 import com.example.kirchhoff.rxexample.ui.operators.creating.IntervalOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.RangeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.RepeatOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.creating.RepeatWhenOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.TimerOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.pagination.PaginationActivity;
 
@@ -191,5 +192,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void repeatOperatorExample(View view) {
         RepeatOperatorActivity.startMe(this);
+    }
+
+    public void repeatWhenOperatorExample(View view) {
+        RepeatWhenOperatorActivity.startMe(this);
     }
 }

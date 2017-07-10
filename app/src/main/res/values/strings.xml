@@ -33,6 +33,7 @@
     <string name="range.operator">Range operator</string>
     <string name="group.by.operator">GroupBy operator</string>
     <string name="repeat.operator">Repeat operator</string>
+    <string name="repeat.when.operator">Repeat when operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>
