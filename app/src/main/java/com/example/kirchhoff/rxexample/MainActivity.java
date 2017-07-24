@@ -30,6 +30,7 @@ import com.example.kirchhoff.rxexample.ui.operators.creating.RepeatWhenOperatorA
 import com.example.kirchhoff.rxexample.ui.operators.creating.TimerOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.DebounceOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.DistinctOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.ElementAtOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.LastOperatorActivity;
@@ -201,5 +202,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void flatMapOperatorExample(View view) {
         FlatMapOperatorActivity.startMe(this);
+    }
+
+    public void elementAtOperatorExample(View view) {
+        ElementAtOperatorActivity.startMe(this);
     }
 }

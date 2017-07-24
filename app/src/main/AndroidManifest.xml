@@ -172,6 +172,10 @@
             android:name=".ui.operators.transforming.FlatMapOperatorActivity"
             android:label="@string/flat.map.operator" />
 
+        <activity
+            android:name=".ui.operators.filtering.ElementAtOperatorActivity"
+            android:label="@string/element.at.operator" />
+
     </application>
 
 </manifest>

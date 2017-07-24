@@ -35,6 +35,7 @@
     <string name="repeat.operator">Repeat operator</string>
     <string name="repeat.when.operator">Repeat when operator</string>
     <string name="flat.map.operator">Flat map operator</string>
+    <string name="element.at.operator">Element At operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>
