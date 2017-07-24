@@ -180,6 +180,10 @@
             android:name=".ui.operators.filtering.IgnoreOperatorActivity"
             android:label="@string/ignore.operator" />
 
+        <activity
+            android:name=".ui.operators.filtering.SampleOperatorActivity"
+            android:label="@string/sample.operator" />
+
     </application>
 
 </manifest>
