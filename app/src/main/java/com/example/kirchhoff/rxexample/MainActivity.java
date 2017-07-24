@@ -33,6 +33,7 @@ import com.example.kirchhoff.rxexample.ui.operators.filtering.DistinctOperatorAc
 import com.example.kirchhoff.rxexample.ui.operators.filtering.ElementAtOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.FilterOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.filtering.IgnoreOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.LastOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.SkipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.TakeOperatorActivity;
@@ -206,5 +207,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void elementAtOperatorExample(View view) {
         ElementAtOperatorActivity.startMe(this);
+    }
+
+    public void ignoreOperatorExample(View view) {
+        IgnoreOperatorActivity.startMe(this);
     }
 }

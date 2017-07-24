@@ -176,6 +176,10 @@
             android:name=".ui.operators.filtering.ElementAtOperatorActivity"
             android:label="@string/element.at.operator" />
 
+        <activity
+            android:name=".ui.operators.filtering.IgnoreOperatorActivity"
+            android:label="@string/ignore.operator" />
+
     </application>
 
 </manifest>

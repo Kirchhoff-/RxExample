@@ -53,11 +53,11 @@ public abstract class BaseOperatorActivity extends AppCompatActivity {
     }
 
     protected void writeToConsole(@Nullable String value) {
-        textView.append(value);
+        Log.d(getTag(), value);
     }
 
     protected void writeToScreen(@Nullable String value) {
-        Log.d(getTag(), value);
+        textView.append(value);
     }
 
     @NonNull
