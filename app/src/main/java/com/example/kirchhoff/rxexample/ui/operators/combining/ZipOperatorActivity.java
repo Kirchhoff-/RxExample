@@ -1,23 +1,15 @@
-package com.example.kirchhoff.rxexample.ui;
+package com.example.kirchhoff.rxexample.ui.operators.combining;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.TextView;
 
-import com.example.kirchhoff.rxexample.R;
 import com.example.kirchhoff.rxexample.data.User;
-import com.example.kirchhoff.rxexample.ui.operators.filtering.FirstOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.BaseOperatorActivity;
 import com.example.kirchhoff.rxexample.utils.UserUtils;
 
 import java.util.List;
 
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -27,11 +19,7 @@ import io.reactivex.schedulers.Schedulers;
  * @author Kirchhoff-
  */
 
-public class ZipOperatorActivity extends AppCompatActivity {
-
-    private static final String TAG = FirstOperatorActivity.class.getName();
-
-    private TextView textView;
+public class ZipOperatorActivity extends BaseOperatorActivity {
 
     public static void startMe(Activity activity) {
         Intent intent = new Intent(activity, ZipOperatorActivity.class);
@@ -39,13 +27,13 @@ public class ZipOperatorActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_base);
+    protected void operatorExample() {
+        zipExample();
+    }
 
-        textView = (TextView) findViewById(R.id.textView);
-
-        findViewById(R.id.button).setOnClickListener(view -> zipExample());
+    @Override
+    protected String getTag() {
+        return ZipOperatorActivity.class.getName();
     }
 
     /*
@@ -84,13 +72,10 @@ public class ZipOperatorActivity extends AppCompatActivity {
     }
 
     private Observable<List<User>> getFootballPlayersObservable() {
-        return Observable.create(new ObservableOnSubscribe<List<User>>() {
-            @Override
-            public void subscribe(ObservableEmitter<List<User>> e) throws Exception {
-                if (!e.isDisposed()) {
-                    e.onNext(UserUtils.getFootballPlayer());
-                    e.onComplete();
-                }
+        return Observable.create(e -> {
+            if (!e.isDisposed()) {
+                e.onNext(UserUtils.getFootballPlayer());
+                e.onComplete();
             }
         });
     }
@@ -99,32 +84,32 @@ public class ZipOperatorActivity extends AppCompatActivity {
         return new Observer<List<User>>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
+                writeToConsole("" + d.isDisposed());
             }
 
             @Override
             public void onNext(List<User> users) {
-                textView.append(" onNext");
-                textView.append("\n");
+                writeToScreen(" onNext");
+                writeToScreen("\n");
                 for (User user : users) {
-                    textView.append(" firstName : " + user.firstName);
-                    textView.append("\n");
+                    writeToScreen(" firstName : " + user.firstName);
+                    writeToScreen("\n");
                 }
-                Log.d(TAG, " onNext :" + users.size());
+                writeToConsole(" onNext :" + users.size());
             }
 
             @Override
             public void onError(Throwable e) {
-                textView.append(" onError : " + e.getMessage());
-                textView.append("\n");
-                Log.d(TAG, " onError : " + e.getMessage());
+                writeToScreen(" onError : " + e.getMessage());
+                writeToScreen("\n");
+                writeToConsole(" onError : " + e.getMessage());
             }
 
             @Override
             public void onComplete() {
-                textView.append(" onComplete");
-                textView.append("\n");
-                Log.d(TAG, " onComplete");
+                writeToScreen(" onComplete");
+                writeToScreen("\n");
+                writeToConsole(" onComplete");
             }
         };
     }

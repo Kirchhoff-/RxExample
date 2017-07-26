@@ -29,7 +29,7 @@
             android:label="@string/map.operator" />
 
         <activity
-            android:name=".ui.ZipOperatorActivity"
+            android:name=".ui.operators.combining.ZipOperatorActivity"
             android:label="@string/zip.operator" />
 
         <activity

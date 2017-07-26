@@ -21,7 +21,7 @@ import com.example.kirchhoff.rxexample.ui.ReplaySubjectActivity;
 import com.example.kirchhoff.rxexample.ui.SingleObserverActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleFirstActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
-import com.example.kirchhoff.rxexample.ui.ZipOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.combining.ZipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.DeferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.IntervalOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.RangeOperatorActivity;
