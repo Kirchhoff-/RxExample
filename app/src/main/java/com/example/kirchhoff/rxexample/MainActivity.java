@@ -21,6 +21,7 @@ import com.example.kirchhoff.rxexample.ui.ReplaySubjectActivity;
 import com.example.kirchhoff.rxexample.ui.SingleObserverActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleFirstActivity;
 import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
+import com.example.kirchhoff.rxexample.ui.operators.combining.CombineLatestOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.JoinOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.StartWithOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.ZipOperatorActivity;
@@ -226,5 +227,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void joinExample(View view) {
         JoinOperatorActivity.startMe(this);
+    }
+
+    public void combineLatestExample(View view) {
+        CombineLatestOperatorActivity.startMe(this);
     }
 }

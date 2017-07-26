@@ -40,6 +40,7 @@
     <string name="sample.operator">Sample operator</string>
     <string name="start.with.operator">Start with operator</string>
     <string name="join.operator">Join operator</string>
+    <string name="combine.latest.operator">Combine Latest operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>

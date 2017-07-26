@@ -192,6 +192,10 @@
             android:name=".ui.operators.combining.JoinOperatorActivity"
             android:label="@string/join.operator" />
 
+        <activity
+            android:name=".ui.operators.combining.CombineLatestOperatorActivity"
+            android:label="@string/combine.latest.operator" />
+
     </application>
 
 </manifest>
