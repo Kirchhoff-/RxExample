@@ -2,31 +2,20 @@ package com.example.kirchhoff.rxexample.ui.operators.filtering;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.TextView;
 
-import com.example.kirchhoff.rxexample.R;
+import com.example.kirchhoff.rxexample.ui.operators.BaseOperatorActivity;
 
 import java.util.Random;
 
 import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author Kirchhoff-
  */
 
-public class SkipOperatorActivity extends AppCompatActivity {
-
-    private static final String TAG = FirstOperatorActivity.class.getName();
-
-    private TextView textView;
+public class SkipOperatorActivity extends BaseOperatorActivity {
 
     public static void startMe(Activity activity) {
         Intent intent = new Intent(activity, SkipOperatorActivity.class);
@@ -34,56 +23,20 @@ public class SkipOperatorActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_base);
+    protected void operatorExample() {
+        skipExample();
+    }
 
-        textView = (TextView) findViewById(R.id.textView);
-
-        findViewById(R.id.button).setOnClickListener(view -> skipExample());
+    @Override
+    protected String getTag() {
+        return SkipOperatorActivity.class.getName();
     }
 
     private void skipExample() {
-        getObservable()
+        Observable.just(1, 2, 3, 4, 5)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .skip(new Random().nextInt(4))
-                .subscribe(getObserver());
+                .subscribe(getIntObserver());
     }
-
-    private Observable<Integer> getObservable() {
-        return Observable.just(1, 2, 3, 4, 5);
-    }
-
-    private Observer<Integer> getObserver() {
-        return new Observer<Integer>() {
-
-            @Override
-            public void onSubscribe(Disposable d) {
-                Log.d(TAG, " onSubscribe : " + d.isDisposed());
-            }
-
-            @Override
-            public void onNext(Integer value) {
-                textView.append(" onNext : value : " + value);
-                textView.append("\n");
-                Log.d(TAG, " onNext value : " + value);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                textView.append(" onError : " + e.getMessage());
-                textView.append("\n");
-                Log.d(TAG, " onError : " + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                textView.append(" onComplete");
-                textView.append("\n");
-                Log.d(TAG, " onComplete");
-            }
-        };
-    }
-
 }
