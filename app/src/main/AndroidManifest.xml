@@ -196,6 +196,10 @@
             android:name=".ui.operators.combining.CombineLatestOperatorActivity"
             android:label="@string/combine.latest.operator" />
 
+        <activity
+            android:name=".ui.operators.combining.SwitchOperatorActivity"
+            android:label="@string/switch.operator" />
+
     </application>
 
 </manifest>

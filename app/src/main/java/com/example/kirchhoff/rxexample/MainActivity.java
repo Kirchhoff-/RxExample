@@ -24,6 +24,7 @@ import com.example.kirchhoff.rxexample.ui.ThrottleLastActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.CombineLatestOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.JoinOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.StartWithOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.combining.SwitchOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.ZipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.DeferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.creating.IntervalOperatorActivity;
@@ -231,5 +232,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void combineLatestExample(View view) {
         CombineLatestOperatorActivity.startMe(this);
+    }
+
+    public void switchExample(View view) {
+        SwitchOperatorActivity.startMe(this);
     }
 }
