@@ -38,6 +38,7 @@
     <string name="element.at.operator">Element At operator</string>
     <string name="ignore.operator">Ignore operator</string>
     <string name="sample.operator">Sample operator</string>
+    <string name="start.with.operator">Start with operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>

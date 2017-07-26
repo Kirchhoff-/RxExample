@@ -244,6 +244,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="startWithExample"
+            android:text="@string/start.with.operator" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="paginationExample"
             android:text="@string/pagination" />
 

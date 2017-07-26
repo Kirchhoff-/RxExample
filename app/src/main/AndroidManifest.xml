@@ -184,6 +184,10 @@
             android:name=".ui.operators.filtering.SampleOperatorActivity"
             android:label="@string/sample.operator" />
 
+        <activity
+            android:name=".ui.operators.combining.StartWithOperatorActivity"
+            android:label="@string/start.with.operator" />
+
     </application>
 
 </manifest>
