@@ -188,6 +188,10 @@
             android:name=".ui.operators.combining.StartWithOperatorActivity"
             android:label="@string/start.with.operator" />
 
+        <activity
+            android:name=".ui.operators.combining.JoinOperatorActivity"
+            android:label="@string/join.operator" />
+
     </application>
 
 </manifest>
