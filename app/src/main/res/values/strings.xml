@@ -42,6 +42,7 @@
     <string name="join.operator">Join operator</string>
     <string name="combine.latest.operator">Combine Latest operator</string>
     <string name="switch.operator">Switch operator</string>
+    <string name="take.while.operator">TakeWhile operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>

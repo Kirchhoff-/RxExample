@@ -200,6 +200,10 @@
             android:name=".ui.operators.combining.SwitchOperatorActivity"
             android:label="@string/switch.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.TakeWhileOperatorActivity"
+            android:label="@string/take.while.operator" />
+
     </application>
 
 </manifest>
