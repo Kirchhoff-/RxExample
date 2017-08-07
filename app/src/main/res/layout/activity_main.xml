@@ -286,6 +286,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="skipUntilExample"
+            android:text="@string/skip.until.operator" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="paginationExample"
             android:text="@string/pagination" />
 

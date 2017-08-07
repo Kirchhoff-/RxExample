@@ -212,6 +212,10 @@
             android:name=".ui.operators.conditional.SkipWhileOperatorActivity"
             android:label="@string/skip.while.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.SkipUntilOperatorActivity"
+            android:label="@string/skip.until.operator" />
+
     </application>
 
 </manifest>

@@ -45,6 +45,7 @@
     <string name="take.while.operator">TakeWhile operator</string>
     <string name="take.until.operator">TakeUntil operator</string>
     <string name="skip.while.operator">SkipWhile operator</string>
+    <string name="skip.until.operator">SkipUntil operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>
