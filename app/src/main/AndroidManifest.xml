@@ -228,6 +228,10 @@
             android:name=".ui.operators.conditional.AmbOperatorActivity"
             android:label="@string/amb.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.AllOperatorActivity"
+            android:label="@string/all.operator" />
+
     </application>
 
 </manifest>
