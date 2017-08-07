@@ -216,6 +216,10 @@
             android:name=".ui.operators.conditional.SkipUntilOperatorActivity"
             android:label="@string/skip.until.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.SequenceEqualOperatorActivity"
+            android:label="@string/sequence.equal.operator" />
+
     </application>
 
 </manifest>

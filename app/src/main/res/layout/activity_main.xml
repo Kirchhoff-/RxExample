@@ -292,6 +292,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="sequenceEqualExample"
+            android:text="@string/sequence.equal.operator" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="paginationExample"
             android:text="@string/pagination" />
 
