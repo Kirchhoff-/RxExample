@@ -224,6 +224,10 @@
             android:name=".ui.operators.conditional.ContainsOperatorActivity"
             android:label="@string/contains.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.AmbOperatorActivity"
+            android:label="@string/amb.operator" />
+
     </application>
 
 </manifest>

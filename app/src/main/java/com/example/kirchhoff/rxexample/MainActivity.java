@@ -26,6 +26,7 @@ import com.example.kirchhoff.rxexample.ui.operators.combining.JoinOperatorActivi
 import com.example.kirchhoff.rxexample.ui.operators.combining.StartWithOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.SwitchOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.combining.ZipOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.conditional.AmbOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.ContainsOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.SequenceEqualOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.SkipUntilOperatorActivity;
@@ -266,5 +267,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void containsExample(View view) {
         ContainsOperatorActivity.startMe(this);
+    }
+
+    public void ambExample(View view) {
+        AmbOperatorActivity.startMe(this);
     }
 }
