@@ -220,6 +220,10 @@
             android:name=".ui.operators.conditional.SequenceEqualOperatorActivity"
             android:label="@string/sequence.equal.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.ContainsOperatorActivity"
+            android:label="@string/contains.operator" />
+
     </application>
 
 </manifest>
