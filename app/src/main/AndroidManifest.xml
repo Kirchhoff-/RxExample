@@ -204,6 +204,10 @@
             android:name=".ui.operators.conditional.TakeWhileOperatorActivity"
             android:label="@string/take.while.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.TakeUntilOperatorActivity"
+            android:label="@string/take.until.operator" />
+
     </application>
 
 </manifest>
