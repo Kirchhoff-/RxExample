@@ -232,6 +232,10 @@
             android:name=".ui.operators.conditional.AllOperatorActivity"
             android:label="@string/all.operator" />
 
+        <activity
+            android:name=".ui.operators.conditional.DefaultIfEmptyOperatorActivity"
+            android:label="@string/default.if.empty.operator" />
+
     </application>
 
 </manifest>

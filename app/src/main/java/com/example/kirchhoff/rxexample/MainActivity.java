@@ -29,6 +29,7 @@ import com.example.kirchhoff.rxexample.ui.operators.combining.ZipOperatorActivit
 import com.example.kirchhoff.rxexample.ui.operators.conditional.AllOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.AmbOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.ContainsOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.conditional.DefaultIfEmptyOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.SequenceEqualOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.SkipUntilOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.conditional.SkipWhileOperatorActivity;
@@ -276,5 +277,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void allOperator(View view) {
         AllOperatorActivity.startMe(this);
+    }
+
+    public void defaultIfEmptyOperator(View view) {
+        DefaultIfEmptyOperatorActivity.startMe(this);
     }
 }
