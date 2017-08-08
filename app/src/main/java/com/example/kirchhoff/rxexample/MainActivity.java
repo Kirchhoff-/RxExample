@@ -54,6 +54,7 @@ import com.example.kirchhoff.rxexample.ui.operators.filtering.TakeOperatorActivi
 import com.example.kirchhoff.rxexample.ui.operators.mathematical.AverageOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.mathematical.MaxOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.mathematical.MinOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.mathematical.SumOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.FlatMapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.GroupBuyOperatorActivity;
@@ -296,5 +297,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void averageOperator(View view) {
         AverageOperatorActivity.startMe(this);
+    }
+
+    public void sumOperator(View view) {
+        SumOperatorActivity.startMe(this);
     }
 }

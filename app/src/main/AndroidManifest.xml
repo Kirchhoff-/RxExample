@@ -248,6 +248,10 @@
             android:name=".ui.operators.mathematical.AverageOperatorActivity"
             android:label="@string/average.operator" />
 
+        <activity
+            android:name=".ui.operators.mathematical.SumOperatorActivity"
+            android:label="@string/sum.operator" />
+
     </application>
 
 </manifest>

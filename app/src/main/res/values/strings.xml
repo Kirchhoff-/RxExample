@@ -54,6 +54,7 @@
     <string name="max.operator">Max operator</string>
     <string name="min.operator">Min operator</string>
     <string name="average.operator">Average operator</string>
+    <string name="sum.operator">Sum operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>
