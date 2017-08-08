@@ -252,6 +252,10 @@
             android:name=".ui.operators.mathematical.SumOperatorActivity"
             android:label="@string/sum.operator" />
 
+        <activity
+            android:name=".ui.operators.mathematical.CountOperatorActivity"
+            android:label="@string/count.operator" />
+
     </application>
 
 </manifest>
