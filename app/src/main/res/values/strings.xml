@@ -53,6 +53,7 @@
     <string name="default.if.empty.operator">DefaultIfEmpty operator</string>
     <string name="max.operator">Max operator</string>
     <string name="min.operator">Min operator</string>
+    <string name="average.operator">Average operator</string>
 
     <string name="pagination.title">Pagination Example</string>
     <string name="pagination">Pagination</string>
