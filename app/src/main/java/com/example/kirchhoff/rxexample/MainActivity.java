@@ -52,6 +52,7 @@ import com.example.kirchhoff.rxexample.ui.operators.filtering.SampleOperatorActi
 import com.example.kirchhoff.rxexample.ui.operators.filtering.SkipOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.filtering.TakeOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.mathematical.MaxOperatorActivity;
+import com.example.kirchhoff.rxexample.ui.operators.mathematical.MinOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.BufferOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.FlatMapOperatorActivity;
 import com.example.kirchhoff.rxexample.ui.operators.transforming.GroupBuyOperatorActivity;
@@ -286,5 +287,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void maxOperator(View view) {
         MaxOperatorActivity.startMe(this);
+    }
+
+    public void minOperator(View view) {
+        MinOperatorActivity.startMe(this);
     }
 }

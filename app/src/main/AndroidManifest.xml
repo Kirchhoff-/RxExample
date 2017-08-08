@@ -240,6 +240,10 @@
             android:name=".ui.operators.mathematical.MaxOperatorActivity"
             android:label="@string/max.operator" />
 
+        <activity
+            android:name=".ui.operators.mathematical.MinOperatorActivity"
+            android:label="@string/min.operator" />
+
     </application>
 
 </manifest>
