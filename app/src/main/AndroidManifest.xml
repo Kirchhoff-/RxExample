@@ -236,6 +236,10 @@
             android:name=".ui.operators.conditional.DefaultIfEmptyOperatorActivity"
             android:label="@string/default.if.empty.operator" />
 
+        <activity
+            android:name=".ui.operators.mathematical.MaxOperatorActivity"
+            android:label="@string/max.operator" />
+
     </application>
 
 </manifest>
